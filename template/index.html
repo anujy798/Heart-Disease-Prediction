@@ -1,0 +1,126 @@
+<!-- This is GUI for Heart disease Detection Application Using Machine Learning Classifer -->
+
+<!DOCTYPE html>
+<html >
+<head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+<style>
+  body{
+background: #DA4453;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #89216B, #DA4453);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #89216B, #DA4453); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+}
+.mt-10{
+  margin-top: 200px;
+
+}
+h1{
+ color:#ffffff;
+}
+</style>
+
+ </head> 
+<body>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="container mt-10">
+     <h1><strong>  WELCOME TO THE HEART DISEASE PREDICTION APP! </strong></h1> 
+  </div>
+
+
+    </div>
+    <div class="col-lg-6">
+  <div class="card mt-1">
+  <h5 class="card-header">Please fill details!</h5>
+  <div class="card-body">
+
+     <div if="ui">
+      <form class="form-group" action="{{url_for('predict')}}" method="post">
+        <div class="row"> 
+          <div class="col-lg-6">
+            <label> <strong>age</strong> </label>
+              <input type="text" name="age" class="form-control" placeholder="age" required="required"> </div>
+             <div class="col-lg-6">
+            <label> <strong>sex</strong> </label>
+              <input type="text" name="sex" class="form-control" placeholder="sex" required="required"> 
+            </div>  
+           </div> 
+          <div class="row"> 
+          <div class="col-lg-6">
+            <label><strong> cp </strong></label>
+              <input type="text" name="cp" class="form-control" placeholder="cp" required="required"> </div>
+             <div class="col-lg-6">
+            <label><strong> trestbps</strong></label>
+              <input type="text" name="trestbps" class="form-control" placeholder="trestbps" required="required"> 
+            </div>  
+           </div> 
+            <div class="row"> 
+          <div class="col-lg-6">
+            <label> <strong>chol</strong> </label>
+              <input type="text" name="chol" class="form-control" placeholder="chol" required="required"> </div>
+             <div class="col-lg-6">
+            <label> <strong>fbs</strong> </label>
+              <input type="text" name="fbs" class="form-control" placeholder="fbs" required="required"> 
+            </div>  
+           </div> 
+            <div class="row"> 
+          <div class="col-lg-6">
+            <label> <strong>restecg</strong> </label>
+              <input type="text" name="restecg" class="form-control" placeholder="restecg" required="required"> </div>
+             <div class="col-lg-6">
+            <label> <strong>thalach </strong></label>
+              <input type="text" name="thalach" class="form-control" placeholder="thalach" required="required"> 
+            </div>  
+           </div> 
+            <div class="row"> 
+          <div class="col-lg-6">
+            <label> <strong>exang </strong></label>
+              <input type="text" name="exang" class="form-control" placeholder="exang " required="required"> </div>
+             <div class="col-lg-6">
+            <label><strong> oldpeak </strong></label>
+              <input type="text" name="oldpeak" class="form-control" placeholder="oldpeak" required="required"> 
+            </div>  
+           </div> 
+            <div class="row"> 
+          <div class="col-lg-4">
+            <label><strong> slope </strong></label>
+              <input type="text" name="slope" class="form-control" placeholder="slope " required="required"> </div>
+             <div class="col-lg-4">
+            <label> <strong>ca </strong></label>
+              <input type="text" name="ca" class="form-control" placeholder="ca" required="required"> 
+            </div>
+             <div class="col-lg-4">
+            <label><strong> thal</label>
+              <input type="text" name="thal" class="form-control" placeholder="thal" required="required"> 
+            </div>    
+           </div> 
+           <br>
+
+           <div class="border border-light mb-4">
+
+    <div class="button_cont" align="center"><a class="button_css" href="#" target="_blank" rel="nofollow noopener">
+            <button type="submit" class="btn btn-primary btn-block btn-large"><strong>Predict Heart disease</strong></button></a>
+        </div>
+
+  </div>
+
+      </form> 
+    </div>
+ 
+   <div>
+       <center>
+   <h2>{{ prediction_text }}</h2>
+       </center>
+   </div>
+
+
+ <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>                                       
+        
+</body>
+</html>
